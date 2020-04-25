@@ -7,38 +7,49 @@
     <title>Calculadora</title>
     <script>
         function somar() {
-            let n1 = parseInt(document.body.children[1].children[0].value)
-            let n2 = parseInt(document.body.children[2].children[0].value)
+            let n1 = parseInt(campo1.value)
+            let n2 = parseInt(campo2.value)
             let s = n1 + n2
             window.alert(s)
+        }    
 
        
 
 function sub() {
+    let n1 = parseInt(campo1.value)
+            let n2 = parseInt(campo2.value)
+            let s = n1 - n2
+            window.alert(s)
 
 }
 
 function div() {
+    let n1 = parseInt(campo1.value)
+            let n2 = parseInt(campo2.value)
+            let s = n1 / n2
+            window.alert(s)
 
 }
 
 function mul() {
+    let n1 = parseInt(campo1.value)
+            let n2 = parseInt(campo2.value)
+            let s = n1 * n2
+            window.alert(s)
 
 }
 </script>
-        }
-    </script>
 </head>
 
 <body>
     <h1> Calculadora </h1>
-    <div> <input placeholder="Número 1" type="number"></div>
-    <div> <input placeholder="Número 2" type="number"></div>
+    <div> <input id="campo1" placeholder="Número 1" type="number"></div>
+    <div> <input id="campo2" placeholder="Número 2" type="number"></div>
     <div>
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
+        <button onclick="somar()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
     </div>
 </body>
 

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,7 +10,9 @@
             let n1 = parseInt(campo1.value)
             let n2 = parseInt(campo2.value)
             let s = n1 + n2
-            window.alert(s)
+           //window.alert(s)
+           resultado.innerText = s
+           
         }    
 
        
@@ -19,7 +21,8 @@ function sub() {
     let n1 = parseInt(campo1.value)
             let n2 = parseInt(campo2.value)
             let s = n1 - n2
-            window.alert(s)
+           window.alert(s)
+           //resultado.innerText = s
 
 }
 
@@ -27,7 +30,8 @@ function div() {
     let n1 = parseInt(campo1.value)
             let n2 = parseInt(campo2.value)
             let s = n1 / n2
-            window.alert(s)
+           window.alert(s)
+           //resultado.innerText = s
 
 }
 
@@ -35,7 +39,8 @@ function mul() {
     let n1 = parseInt(campo1.value)
             let n2 = parseInt(campo2.value)
             let s = n1 * n2
-            window.alert(s)
+           window.alert(s)
+           //resultado. innertext =s
 
 }
 </script>
@@ -50,6 +55,8 @@ function mul() {
         <button onclick="sub()">-</button>
         <button onclick="mul()">*</button>
         <button onclick="div()">/</button>
+    </div>
+    <div id="resultado"> 
     </div>
 </body>
 

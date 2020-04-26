@@ -4,11 +4,29 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Salario Desconto</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script type="text/javascript">
+    function somarValores(){
+        var Salario = document.getElementById("txt1").value;
+        var Porcetagem = document.getElementById("txt2").value;
+        var Calcular = Salario/Porcetagem*10%;
+        alert(Calcular);
+    }
+</script>
+    
 </head>
 <body>
-    
+    <fieldset>
+        <legend>Cálculo do salário</legend>
+    </br>    
+     <div>   <label>Salario    </label>
+        <input id="txt1" type="text"/>
+    </div>   
+    </br>    
+     <div><label>Porcentagem</label> 
+        <input id="txt2" type="text"/>
+     </div>
+    </br>    
+        <button id="Somar" onclick="somarValores()">Calcular</button>
+    </fieldset>
 </body>
 </html>

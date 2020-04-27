@@ -7,10 +7,10 @@
     <script type="text/javascript">
     function somarValores(){
         var s1 = document.getElementById("txt1").value;
-        var Ps2 = document.getElementById("txt2").value;
-        var s3 = s1/s2*10%;
-        alert(Calcular);
-        document.getElementById('resultado').value = result;
+        var s2 = document.getElementById("txt2").value;
+        var s =  s1/s2*10/100;
+        //window.alert(s);
+        resultado.innerText = s
     }
 </script>
     
@@ -19,15 +19,19 @@
     <fieldset>
         <legend>Cálculo do salário</legend>
     </br>    
-     <div>   <label>Salario    </label>
+     <div>   <label>Salario  </label>
         <input id="txt1" type="text"/>
     </div>   
     </br>    
-     <div><label>Porcentagem</label> 
+     <div><label>Desconto Porcetagen</label> 
         <input id="txt2" type="text"/>
      </div>
     </br>    
+    <div>
         <button id="Somar" onclick="somarValores()">Calcular</button>
+    </div>
+    <div id= "resultado">
+    </div>    
     </fieldset>
 </body>
 </html>

@@ -5,10 +5,13 @@
     <script type="text/javascript">
     function somarValores(){
         var salario = document.getElementById("txt1").value;
-        var diminuir_salario = document.getElementById("txt2").value;
-        var porcentagem =  salario*(diminuir_salario/100);
-        var total = salario-diminuir_salario;
-        //var total = preco * (porcentagem/100);
+        var Bonus = document.getElementById("txt2").value;
+        var Total = document.getElementById("txt3").value;
+        var Desconto = document.getElementById("txt4").value;
+        var Liquido = document.getElementById("txt5").value;
+        var Total =  salario+Bonus;
+        //var total = salario*(diminuir_salario/100;
+        //var Liquido = Total*(desconto/100);
         //window.alert(s);
         resultado.innerText = total;
     }
@@ -17,18 +20,30 @@
 </head>
 <body>
     <fieldset>
-        <legend>Cálculo do salário</legend>
-    </br>    
-     <div>   <label>Salario  </label>
-        <input id="txt1" type="text"/>
-    </div>   
-    </br>    
-     <div><label>Desconto Porcetagen</label> 
-        <input id="txt2" type="text"/>
-     </div>
+           <legend>Cálculo Do Salário</legend>
+</br>    
+    <div>  <label>Salario  </label>
+           <input id="txt1" type="text"/>
+    </div>
+</br>   
+    <div>  <label>Bonus    </label>
+           <input id="txt2" type="text"/>
+    </div>
+</br>
+    <div>  <label> Total</label> 
+           <input id="txt3" type="text"/>
+    </div>
+</br>    
+    <div>  <label>Desconto </label> 
+           <input id="txt4" type="text"/>
+    </div>
+</br>
+    <div>  <label>Total Liquido </label> 
+           <input id="txt5" type="text"/>
+    </div>
     </br>    
     <div>
-        <button id="Somar" onclick="somarValores()">Calcular</button>
+           <button id="Somar" onclick="somarValores()">Calcular</button>
     </div>
     <div id= "resultado">
     </div>    

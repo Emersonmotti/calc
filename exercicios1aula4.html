@@ -1,0 +1,37 @@
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Salario Desconto</title>
+    <script type="text/javascript">
+    function somarValores(){
+        var salario = document.getElementById("txt1").value;
+        var diminuir_salario = document.getElementById("txt2").value;
+        var porcentagem =  salario*(diminuir_salario/100);
+        var total = salario-diminuir_salario;
+        //var total = preco * (porcentagem/100);
+        //window.alert(s);
+        resultado.innerText = total;
+    }
+</script>
+    
+</head>
+<body>
+    <fieldset>
+        <legend>Cálculo do salário</legend>
+    </br>    
+     <div>   <label>Salario  </label>
+        <input id="txt1" type="text"/>
+    </div>   
+    </br>    
+     <div><label>Desconto Porcetagen</label> 
+        <input id="txt2" type="text"/>
+     </div>
+    </br>    
+    <div>
+        <button id="Somar" onclick="somarValores()">Calcular</button>
+    </div>
+    <div id= "resultado">
+    </div>    
+    </fieldset>
+</body>
+</html>

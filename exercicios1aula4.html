@@ -4,16 +4,23 @@
     <title>Salario Desconto</title>
     <script type="text/javascript">
     function somarValores(){
-        var salario = document.getElementById("txt1").value;
-        var Bonus = document.getElementById("txt2").value;
-        var Total = document.getElementById("txt3").value;
-        var Desconto = document.getElementById("txt4").value;
-        var Liquido = document.getElementById("txt5").value;
-        var Total =  salario+Bonus;
-        //var total = salario*(diminuir_salario/100;
-        //var Liquido = Total*(desconto/100);
+        var salario_get = document.getElementById("salario").value;
+        var quant_filhos = document.getElementById("qtd_filho").value;
+        
+        //Conta Ssalario
+        var filho = quant_filhos * 5;
+        var bonus_salario =salario_get*(filho/100);
+        var salario_com_bonus =parseInt(salario_get)+parseInt(bonus_salario);
+
+        //desconto salario
+        var desconto = salario_com_bonus*(6/100);
+        var salario_liquido = salario_com_bonus-desconto;
         //window.alert(s);
-        resultado.innerText = total;
+        salario_bruto.innerText = "Salario: R$" + salario_get;
+        bonus.innerText = " Bonus: R$ " + bonus_salario;
+        total.innerText = " Salario Com Bonus: R$ " + salario_com_bonus;
+        desconto_sal.innerText = "Desconto Salario: R$ " + desconto;
+        liquido.innerText = "Salario LIquido: R$ " + salario_liquido;
     }
 </script>
     
@@ -23,30 +30,21 @@
            <legend>Cálculo Do Salário</legend>
 </br>    
     <div>  <label>Salario  </label>
-           <input id="txt1" type="text"/>
+           <input id="salario" type="text"/>
     </div>
 </br>   
-    <div>  <label>Bonus    </label>
-           <input id="txt2" type="text"/>
-    </div>
-</br>
-    <div>  <label> Total</label> 
-           <input id="txt3" type="text"/>
-    </div>
+<div>  <label>Quant Filhos  </label>
+    <input id="qtd_filho" type="text"/>
+</div>
 </br>    
-    <div>  <label>Desconto </label> 
-           <input id="txt4" type="text"/>
-    </div>
-</br>
-    <div>  <label>Total Liquido </label> 
-           <input id="txt5" type="text"/>
-    </div>
-    </br>    
     <div>
            <button id="Somar" onclick="somarValores()">Calcular</button>
-    </div>
-    <div id= "resultado">
-    </div>    
+    </div></br>
+    <div id= "salario_bruto"></div></br>
+    <div id= "bonus"></div></br>
+    <div id= "total"></div></br>
+    <div id= "desconto_sal"></div></br>
+    <div id= "liquido"></div>    
     </fieldset>
 </body>
 </html>

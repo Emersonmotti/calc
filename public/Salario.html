@@ -8,8 +8,9 @@
     function somarValores(){
         var salario = document.getElementById("txt1").value;
         var diminuir_salario = document.getElementById("txt2").value;
-        var porcentagem =  salario*(diminuir_salario/100);
-        var total = salario-diminuir_salario;
+        var total = salario-(salario/100*diminuir_salario);
+        
+        //var total = salario-diminuir_salario;
         //var total = preco * (porcentagem/100);
         //window.alert(s);
         resultado.innerText = total;
